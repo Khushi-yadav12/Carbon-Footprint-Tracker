@@ -1,0 +1,213 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footprint360</title>
+    <!-- Box Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="cal.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <a href="#" class="logo">Footprint 360</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Dark Mode -->
+        <div class="bx bx-moon" id="darkmode"></div>
+      </ul>
+    </header>
+
+     
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img
+          src="https://www.greengeeks.com/blog/wp-content/uploads/2018/12/carbon-emissions.jpg"
+          alt=""
+        />
+      </div> 
+      <div id="calculator" class="container hidden">
+        <h2>Track Your Carbon Footprint</h2>
+        <h3>Log your daily activities to calculate your carbon footprint.</h3>
+    
+        <div class="hoo1">
+            <div class="hoo"><label for="diesel">Diesel Consumption (l):</label>
+            <input type="number" id="diesel" placeholder="Enter litre used" min="0" required></div><br>
+            
+            <div class="hoo"><label for="petrol">Petrol Consumption (l):</label>
+            <input type="number" id="petrol" placeholder="Enter litre used" min="0" required></div><br>
+
+            <div class="hoo"><label for="cng">CNG Consumption (kg):</label>
+            <input type="number" id="cng" placeholder="Enter kg used" min="0" required></div><br>
+
+            <div class="hoo"><label for="electricity">Electricity Consumption (kWh):</label>
+            <input type="number" id="electricity" placeholder="Enter kWh used" min="0" required></div><br>
+            
+            <div class="hoo"><label for="vegmeal">veg Food Consumption:</label>
+            <input type="number" id="vegmeal" placeholder="Enter meals eaten per day" min="0" required></div><br>
+
+            <div class="hoo"><label for="nonvegmeal">non-veg Food Consumption:</label>
+            <input type="number" id="nonvegmeal" placeholder="Enter meals eaten per day" min="0" required></div><br>
+            
+            <button onclick="calculateFootprint()" class="btn">Calculate Carbon Footprint</button>
+            
+            <div id="result"></div>
+        </div><br>
+        
+
+
+        <p class="calculator-description">Use the calculator to see how your daily habits contribute to your carbon
+            emissions. You'll receive insights into how small changes can make a big difference in reducing your
+            environmental impact.</p>
+    </div>
+        </p>
+        <a href="inn.html" class="btn">Learn More</a>
+      </div>
+    </section>
+
+    
+
+    <!-- Connect -->
+    <section class="connect">
+      <div class="connect-text">
+        <span>Let's Talk</span>
+        <h2>Connect now</h2>
+      </div>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="contact-box">
+        <h3>FootPrint360</h3>
+        <span>Connect With Us</span>
+        <div class="social">
+          <a href="https://www.facebook.com/"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a href="https://x.com/?lang=en-in"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.instagram.com/"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h3>Menu Links</h3>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#log">Login</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </div>
+      <div class="contact-box">
+        <h3>Quick Links</h3>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#Privacy Policy">Privacy Policy</a></li>
+        <li><a href="#Disclaimer">Disclaimer</a></li>
+        <li><a href="#Terms Of Use">Terms Of Use</a></li>
+      </div>
+      <div class="contact-box address">
+        <h3>Contact</h3>
+        <i class="bx bxs-map"
+          ><span>005, Lorem ipsum dolor, sit amet consectetur, India</span></i
+        >
+        <i class="bx bxs-phone"><span>+91 000 999 5555</span></i>
+        <i class="bx bxs-envelope"><span>Exampless@email.com</span></i>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <hr />
+      <p>© SS All Right Reserved.</p>
+    </div>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JavaScript -->
+    <script src="cal.js"></script>
+    <script>
+      function showSection(sectionId) {
+          const sections = document.querySelectorAll('.container');
+          sections.forEach(section =>{
+              if (section.id === sectionId) {
+                  section.classList.remove('hidden');
+              } else {
+                  section.classList.add('hidden');
+              }
+          });
+      }
+
+      function calculateFootprint() {
+  const diesel = parseFloat(document.getElementById('diesel').value) || 0;
+  const petrol = parseFloat(document.getElementById('petrol').value) || 0;
+  const cng = parseFloat(document.getElementById('cng').value) || 0;
+  const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+  const vegmeals = parseFloat(document.getElementById('vegmeal').value) || 0;
+  const nonvegmeals = parseFloat(document.getElementById('nonvegmeal').value) || 0;
+
+  const dieselFootprint = diesel * 2.68;
+  const petrolFootprint = petrol * 2.31;
+  const cngFootprint = cng * 2.83;
+  const electricityFootprint = electricity * 0.82; // kg CO2 per kWh
+  const vegfoodFootprint = vegmeals * 2.5;
+  const nonvegfoodFootprint = nonvegmeals * 3.8; // kg CO2 per meal
+
+  const totalFootprint = dieselFootprint + petrolFootprint + cngFootprint + electricityFootprint + vegfoodFootprint + nonvegfoodFootprint;
+
+
+  document.getElementById('result').innerText = `Your estimated daily carbon footprint is: ${totalFootprint.toFixed(2)} kg CO2`;
+  }
+      function openPopup() {
+          document.getElementById('loginPopup').style.display = 'flex';
+      }
+      function closePopup() {
+          document.getElementById('loginPopup').style.display = 'none';
+      }
+      function submitLogin() {
+          var username = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+
+          if (username && password) {
+              var loginBtn = document.getElementById('loginBtn');
+              loginBtn.innerText = 'Logged in as ' + username;
+              loginBtn.disabled = true;
+              alert('Login successful! Welcome, ' + username + '!');
+              closePopup();
+          } else {
+              alert('Please fill in both fields.');
+          }
+      }
+      
+
+
+  </script>
+  <script src="script.js"></script>
+  <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+              { pageLanguage: 'en' },
+              'google_translate_element'
+          );
+      } 
+  </script>
+  <script type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

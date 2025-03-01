@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footprint360</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- Link To CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background-color: #e0f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #43b74e;
+      text-align: center;
+      font-size: 50px;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .pie-chart {
+      width: 200px;
+      height: 200px;
+      background-image: conic-gradient(#43b74e 0% 25%, #ddd 25% 100%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 20px auto;
+    }
+    .pie-chart:after {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo">Footprint 360</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Dark Mode -->
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+    
+    <!-- kids -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="k.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>Lets Learn <br> Kids </h2>
+            <p> Lets cut our carbon Footprints kids </p>
+            <a href="kids.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <div class="content">
+        <div class="section">
+          <h2>What are Greenhouse Gases?</h2>
+          <p>Greenhouse gases are gases that trap heat in the Earth's atmosphere. They keep our planet warm and help make it a comfortable place to live. However, too much of these gases can lead to global warming.</p>
+        </div>
+        <div class="section">
+          <h2>Examples of Greenhouse Gases</h2>
+          <ul>
+            <li>Carbon Dioxide (CO₂)</li>
+            <li>Methane (CH₄)</li>
+            <li>Nitrous Oxide (N₂O)</li>
+            <li>Water Vapor (H₂O)</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>Greenhouse Gas Emissions</h2>
+          <div class="pie-chart"></div>
+          <p>The pie chart above shows the proportion of different greenhouse gases emitted into the atmosphere. We need to reduce these emissions to protect our planet!</p>
+        </div>
+      </div>
+      <!-- Menu -->
+    <section class="menu" id="menu">
+        <div class="heading">
+            <span>Let'S Play</span>
+            <h2>Remember kids Every   Foot   print   counts</h2>
+        </div>
+        <div class="menu-container">
+            <!-- Box 1 -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="cc.jpg" alt="">
+                </div>
+                <h2> Climate and kids</h2>
+                <a href="https://climatekids.nasa.gov/menu/energy/"><h3>click here</h3></a>
+                <span>-</span>
+                <i class='bx bx-cart-alt'></i>
+            </div>
+            <!-- Box 2 -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="gw.jpg" alt="">
+                </div>
+                <h2>Learn & play</h2>
+                <a href="https://www.eldersclimateaction.org/with-your-grandchildren/"><h3>click here</h3></a>
+                <span>-</span>
+                <i class='bx bx-cart-alt'></i>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="box-img">
+                    <img src="ak.jpg" alt="">
+                </div>
+                <h2>Kids love animals</h2>
+                <a href ="https://www.bing.com/videos/riverview/relatedvideo?&q=fun+animal++kids+carttoon&&mid=1ACB7940F109F0A4ADC01ACB7940F109F0A4ADC0&&FORM=VRDGAR"><h3>click here</h3></a>
+                <span>-</span>
+                <i class='bx bx-cart-alt'></i>
+            </div>
+        </div>
+    </section>
+ 
+
+    <!-- Connect -->
+    <section class="connect">
+        <div class="connect-text">
+            <span>Let's Talk</span>
+            <h2>Connect now</h2>
+        </div>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            <h3>FootPrint360</h3>
+            <span>Connect With Us</span>
+            <div class="social">
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://x.com/?lang=en-in"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <div class="contact-box">
+            <h3>Menu Links</h3>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#log">Login</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+        <div class="contact-box">
+            <h3>Quick Links</h3>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Privacy Policy">Privacy Policy</a></li>
+            <li><a href="#Disclaimer">Disclaimer</a></li>
+            <li><a href="#Terms Of Use">Terms Of Use</a></li>
+        </div>
+        <div class="contact-box address">
+            <h3>Contact</h3>
+            <i class='bx bxs-map' ><span>005, Lorem ipsum dolor, sit amet consectetur, India</span></i>
+            <i class='bx bxs-phone' ><span>+91 000 999 5555</span></i>
+            <i class='bx bxs-envelope' ><span>Exampless@email.com</span></i>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <hr>
+        <p>© SS All Right Reserved.</p>
+    </div>
+
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
